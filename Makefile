@@ -3,7 +3,7 @@
 install:
 	su -c 'cp packages/sources.list /etc/apt/sources.list && \
 		apt update && \
-		xargs -a packages/base.list apt install -y && \
+		xargs -a packages/default.list apt install -y && \
 		apt autoremove -y'
 
 nvidia:

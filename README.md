@@ -29,7 +29,7 @@ git clone https://github.com/aloysdev/dotfiles.git && cd dotfiles
 ```
 6. Inspect [`Makefile`](Makefile) and use `make` to install what you need, for example :
 ```bash
-# Base install
+# Basic installation
 make install
 
 # NVIDIA drivers
