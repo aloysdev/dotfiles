@@ -5,6 +5,7 @@ install:
 		apt update && \
 		xargs -a packages/default.list apt install -y && \
 		apt autoremove -y'
+	bash symlink.sh config/bash
 
 nvidia:
 	su -c 'xargs -a packages/nvidia.list apt install -y'
