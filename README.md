@@ -39,6 +39,9 @@ make install
 # NVIDIA drivers
 make nvidia
 
+# Development tools
+make dev
+
 # GNOME (asssuming it has been selected during debian installation process)
 make gnome
 

@@ -1,4 +1,4 @@
-.PHONY: install nvidia gnome
+.PHONY: install nvidia dev gnome
 
 install:
 	su -c 'cp packages/sources.list /etc/apt/sources.list && \
@@ -8,6 +8,10 @@ install:
 
 nvidia:
 	su -c 'xargs -a packages/nvidia.list apt install -y'
+
+dev:
+	su -c 'xargs -a packages/dev.list apt install -y'
+	git remote set-url origin git@github.com:aloysdev/dotfiles.git
 
 gnome:
 	su -c 'xargs -a packages/gnome.list apt install -y && \
