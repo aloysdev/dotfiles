@@ -1,10 +1,14 @@
+> :information_source: This repository is used to store my dotfiles and quick installation scripts for my personal needs. Feel free to check only the configuration files you are interested in (see [config](./config) folder).
+
+---
+
 [**Debian 12 (bookworm)**](https://www.debian.org/releases/bookworm/)
 
 # Why Debian ?
 
 - Made of free and open source software and will always be 100% free.
-- Stable, secure and relable.
-- Large communitity.
+- Stable, secure and reliable.
+- Large community.
 - Server version available.
 
 See https://www.debian.org/intro/why_debian for more.
@@ -34,6 +38,9 @@ make install
 
 # NVIDIA drivers
 make nvidia
+
+# GNOME (asssuming it has been selected during debian installation process)
+make gnome
 
 # ...
 ```
