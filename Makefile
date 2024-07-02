@@ -1,4 +1,4 @@
-.PHONY: install nvidia
+.PHONY: install nvidia gnome
 
 install:
 	su -c 'cp packages/sources.list /etc/apt/sources.list && \
