@@ -12,6 +12,7 @@ nvidia:
 dev:
 	su -c 'xargs -a packages/dev.list apt install -y'
 	git remote set-url origin git@github.com:aloysdev/dotfiles.git
+	bash symlink.sh config/git
 	bash symlink.sh config/ssh
 
 gnome:
