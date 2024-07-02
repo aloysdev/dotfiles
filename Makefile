@@ -15,6 +15,7 @@ dev:
 	git remote set-url origin git@github.com:aloysdev/dotfiles.git
 	bash symlink.sh config/git
 	bash symlink.sh config/ssh
+	bash symlink.sh config/vscode
 
 gnome:
 	su -c 'xargs -a packages/gnome.list apt install -y && \

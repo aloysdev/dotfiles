@@ -1,0 +1,51 @@
+{
+    // Telemetry
+    "telemetry.telemetryLevel": "off",
+
+    // Workbench
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "workbench.sideBar.location": "left",
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "none",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.indent": 20,
+    "workbench.layoutControl.enabled": false,
+
+    // Editor
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 24,
+    "editor.renderWhitespace": "trailing",
+    "editor.suggest.insertMode": "insert",
+    "editor.linkedEditing": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.minimap.enabled": false,
+    "editor.smoothScrolling": true,
+    "editor.inlayHints.enabled": "off",
+    "editor.parameterHints.enabled": false,
+    "editor.tabSize": 4,
+
+    // Window
+    "window.zoomLevel": 0,
+    "window.menuBarVisibility": "hidden",
+    "window.commandCenter": false,
+
+    // Explorer
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+
+    // Files
+    "files.autoSave": "onFocusChange",
+    "files.defaultLanguage": "markdown",
+
+    // Git
+    "git.autofetch": false,
+
+    // Emmet
+    "emmet.triggerExpansionOnTab": true,
+
+    // Extensions
+    "extensions.ignoreRecommendations": true
+}
