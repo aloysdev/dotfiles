@@ -3,7 +3,7 @@
     "telemetry.telemetryLevel": "off",
 
     // Workbench
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "JetBrains New Dark",
     "workbench.iconTheme": "bearded-icons",
     "workbench.sideBar.location": "left",
     "workbench.list.smoothScrolling": true,
@@ -31,6 +31,7 @@
     "window.zoomLevel": 0,
     "window.menuBarVisibility": "hidden",
     "window.commandCenter": false,
+    "window.titleBarStyle": "custom",
 
     // Explorer
     "explorer.compactFolders": false,
