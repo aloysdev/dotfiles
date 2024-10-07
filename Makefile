@@ -1,4 +1,4 @@
-.PHONY: install gnome
+.PHONY: install gnome dev
 
 install:
 	sudo apt update
@@ -85,3 +85,8 @@ gnome:
 	# Extensions
 	gnome-extensions disable ubuntu-dock@ubuntu.com
 	gnome-extensions disable ding@rastersoft.com
+
+dev:
+	git remote set-url origin git@github.com:aloysdev/dotfiles.git
+	bash symlink.sh config/git
+	bash symlink.sh config/ssh
