@@ -90,3 +90,4 @@ dev:
 	git remote set-url origin git@github.com:aloysdev/dotfiles.git
 	bash symlink.sh config/git
 	bash symlink.sh config/ssh
+	bash symlink.sh config/vscode
