@@ -36,8 +36,8 @@ gnome:
 	gsettings set org.gnome.desktop.privacy old-files-age 30
 
 	# Theme settings
-	gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-purple-dark'
-	gsettings set org.gnome.desktop.interface icon-theme 'Yaru-purple'
+	gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-blue-dark'
+	gsettings set org.gnome.desktop.interface icon-theme 'Yaru-blue'
 	gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 	# Keybindings settings
