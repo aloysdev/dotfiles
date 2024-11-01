@@ -1,0 +1,7 @@
+Host github.com
+    User aloysdev
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/github
+
+Host *
+    IdentitiesOnly yes

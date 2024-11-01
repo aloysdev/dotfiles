@@ -99,6 +99,9 @@ dev:
 	bash symlink.sh $(pwd)/config/git/.gitconfig /home/${USER}/.gitconfig
 	git remote set-url origin git@github.com:aloysdev/dotfiles.git
 
+	# SSH
+	bash symlink.sh $(pwd)/config/ssh/config /home/${USER}/.ssh/config
+
 	# Visual Studio Code
 	bash symlink.sh $(pwd)/config/vscode/settings.json /home/${USER}/.config/Code/User/settings.json
 	bash symlink.sh $(pwd)/config/vscode/keybindings.json /home/${USER}/.config/Code/User/keybindings.json
