@@ -94,6 +94,9 @@ gnome:
 
 dev:
 	su -c 'xargs -a packages/dev.list apt install -y'
+
+	# Git
+	bash symlink.sh $(pwd)/config/git/.gitconfig /home/${USER}/.gitconfig
 	git remote set-url origin git@github.com:aloysdev/dotfiles.git
 
 	# Visual Studio Code
