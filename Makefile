@@ -1,6 +1,6 @@
 pwd := $(shell pwd)
 
-.PHONY: install nvidia gnome dev
+.PHONY: install nvidia firefox gnome dev
 
 install:
 	# Packages
@@ -16,6 +16,18 @@ install:
 
 nvidia:
 	su -c 'xargs -a packages/nvidia.list apt install -y'
+
+firefox: # This script is used to replace Firefox ESR version by Firefox latest version
+	su -c 'install -d -m 0755 /etc/apt/keyrings \
+		&& wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- > /etc/apt/keyrings/packages.mozilla.org.asc \
+		&& gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc \
+		&& echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" > /etc/apt/sources.list.d/mozilla.list \
+		&& echo "Package: *" > /etc/apt/preferences.d/mozilla \
+		&& echo "Pin: origin packages.mozilla.org" >> /etc/apt/preferences.d/mozilla \
+		&& echo "Pin-Priority: 1000" >> /etc/apt/preferences.d/mozilla \
+		&& apt update \
+		&& apt install -y firefox \
+		&& apt remove -y --purge firefox-esr'
 
 gnome:
 	# Packages
