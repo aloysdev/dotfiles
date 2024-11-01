@@ -4,11 +4,14 @@ pwd := $(shell pwd)
 
 install:
 	su -c 'bash symlink.sh $(pwd)/config/apt/sources.list /etc/apt/sources.list \
-		&& bash symlink.sh $(pwd)/config/apt/sources.list.d/* /etc/apt/sources.list.d/'
+		&& bash symlink.sh $(pwd)/config/apt/sources.list.d/* /etc/apt/sources.list.d/ \
 	    && apt update \
 		&& apt upgrade -y \
 		&& xargs -a packages/base.list apt install -y \
 		&& apt autoremove -y'
+
+	bash symlink.sh $(pwd)/config/bash/.bashrc /home/${USER}/.bashrc
+	bash symlink.sh $(pwd)/config/bash/.bash_aliases /home/${USER}/.bash_aliases
 
 nvidia:
 	su -c 'xargs -a packages/nvidia.list apt install -y'
