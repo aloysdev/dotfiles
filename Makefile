@@ -1,6 +1,6 @@
 pwd := $(shell pwd)
 
-.PHONY: install nvidia
+.PHONY: install nvidia gnome dev
 
 install:
 	su -c 'bash symlink.sh $(pwd)/config/apt/sources.list /etc/apt/sources.list \
@@ -8,10 +8,10 @@ install:
 	    && apt update \
 		&& apt upgrade -y \
 		&& xargs -a packages/base.list apt install -y \
-		&& apt autoremove'
+		&& apt autoremove -y'
 
 nvidia:
-	su -c 'xargs -a packages/nvidia.list apt install -y' 
+	su -c 'xargs -a packages/nvidia.list apt install -y'
 
 gnome:
 	su -c 'xargs -a packages/gnome.list apt install -y \
@@ -87,3 +87,13 @@ gnome:
 	gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Control><Super>Left']"
 
 	gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print']"
+
+dev:
+	su -c 'xargs -a packages/dev.list apt install -y'
+	git remote set-url origin git@github.com:aloysdev/dotfiles.git
+
+	# Visual Studio Code
+	bash symlink.sh $(pwd)/config/vscode/settings.json /home/${USER}/.config/Code/User/settings.json
+	bash symlink.sh $(pwd)/config/vscode/keybindings.json /home/${USER}/.config/Code/User/keybindings.json
+	code --install-extension mobalic.jetbrains-new-dark --force
+	code --install-extension beardedbear.beardedicons --force

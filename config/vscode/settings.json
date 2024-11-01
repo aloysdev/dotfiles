@@ -1,0 +1,52 @@
+{
+    // Telemetry
+    "telemetry.telemetryLevel": "off",
+
+    // Workbench
+    "workbench.colorTheme": "JetBrains New Dark",
+    "workbench.iconTheme": "bearded-icons",
+    "workbench.sideBar.location": "left",
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "none",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.indent": 20,
+    "workbench.layoutControl.enabled": false,
+
+    // Editor
+    "editor.fontFamily": "'DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.lineHeight": 22,
+    "editor.renderWhitespace": "trailing",
+    "editor.suggest.insertMode": "insert",
+    "editor.linkedEditing": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.minimap.enabled": false,
+    "editor.smoothScrolling": true,
+    "editor.inlayHints.enabled": "off",
+    "editor.parameterHints.enabled": false,
+    "editor.tabSize": 4,
+
+    // Window
+    "window.zoomLevel": 0,
+    "window.menuBarVisibility": "hidden",
+    "window.commandCenter": false,
+    "window.titleBarStyle": "custom",
+
+    // Explorer
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+
+    // Files
+    "files.autoSave": "onFocusChange",
+    "files.defaultLanguage": "markdown",
+
+    // Git
+    "git.autofetch": false,
+
+    // Emmet
+    "emmet.triggerExpansionOnTab": true,
+
+    // Extensions
+    "extensions.ignoreRecommendations": true
+}
