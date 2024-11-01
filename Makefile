@@ -62,6 +62,7 @@ gnome:
 
 	# Theme settings
 	gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+	gsettings set org.gnome.desktop.interface enable-animations false
 
 	# Keybindings settings
 	gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
