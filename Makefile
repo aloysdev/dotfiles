@@ -109,8 +109,7 @@ gnome:
 
 dev:
 	# Packages
-	su -c 'bash symlink.sh $(pwd)/config/apt/sources.list.d/vscode.list /etc/apt/sources.list.d/vscode.list \
-		&& xargs -a packages/dev.list apt install -y'
+	su -c 'xargs -a packages/dev.list apt install -y'
 
 	# Git
 	bash symlink.sh $(pwd)/config/git/.gitconfig /home/${USER}/.gitconfig
@@ -122,5 +121,3 @@ dev:
 	# Visual Studio Code
 	bash symlink.sh $(pwd)/config/vscode/settings.json /home/${USER}/.config/Code/User/settings.json
 	bash symlink.sh $(pwd)/config/vscode/keybindings.json /home/${USER}/.config/Code/User/keybindings.json
-	code --install-extension mobalic.jetbrains-new-dark --force
-	code --install-extension beardedbear.beardedicons --force
