@@ -15,7 +15,8 @@ nvidia:
 
 gnome:
 	su -c 'xargs -a packages/gnome.list apt install -y \
-		&& xargs -a packages/gnome.remove.list apt remove -y'
+		&& xargs -a packages/gnome.remove.list apt remove --purge -y \
+		&& apt autoremove -y'
 
 	# Windows settings
 	gsettings set org.gnome.mutter center-new-windows true
