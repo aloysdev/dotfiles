@@ -3,13 +3,14 @@ pwd := $(shell pwd)
 .PHONY: install nvidia gnome dev
 
 install:
+	# Packages
 	su -c 'bash symlink.sh $(pwd)/config/apt/sources.list /etc/apt/sources.list \
-		&& bash symlink.sh $(pwd)/config/apt/sources.list.d/* /etc/apt/sources.list.d/ \
 	    && apt update \
 		&& apt upgrade -y \
 		&& xargs -a packages/base.list apt install -y \
 		&& apt autoremove -y'
 
+	# Bash
 	bash symlink.sh $(pwd)/config/bash/.bashrc /home/${USER}/.bashrc
 	bash symlink.sh $(pwd)/config/bash/.bash_aliases /home/${USER}/.bash_aliases
 
@@ -17,6 +18,7 @@ nvidia:
 	su -c 'xargs -a packages/nvidia.list apt install -y'
 
 gnome:
+	# Packages
 	su -c 'xargs -a packages/gnome.list apt install -y \
 		&& xargs -a packages/gnome.remove.list apt remove --purge -y \
 		&& apt autoremove -y'
@@ -46,6 +48,7 @@ gnome:
 	gsettings set org.gnome.desktop.privacy remove-old-temp-files true
 	gsettings set org.gnome.desktop.privacy old-files-age 30
 
+	# Theme settings
 	gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 	# Keybindings settings
@@ -93,7 +96,9 @@ gnome:
 	gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print']"
 
 dev:
-	su -c 'xargs -a packages/dev.list apt install -y'
+	# Packages
+	su -c 'bash symlink.sh $(pwd)/config/apt/sources.list.d/vscode.list /etc/apt/sources.list.d/vscode.list \
+		&& xargs -a packages/dev.list apt install -y'
 
 	# Git
 	bash symlink.sh $(pwd)/config/git/.gitconfig /home/${USER}/.gitconfig
