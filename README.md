@@ -2,8 +2,7 @@
 
 ---
 
-[**Debain 12 (Bookworm)**](https://www.debian.org/download)
-
+[**Debian 12 (Bookworm)**](https://www.debian.org/download)
 
 # Installation
 
